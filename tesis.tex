@@ -1,0 +1,70 @@
+\documentclass{book}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage[spanish,mexico]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc} 
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{ragged2e}
+\usepackage{hyperref}
+
+%\usepackage{pslatex}
+%\title{\Huge Tesis}
+%\author{Alonso Baruk Brambila Rojas and Aurelio Adair Fernandez Santiago}
+%\date{\today}
+
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{\clearpage}{}{}
+\makeatother
+
+\begin{document}
+%\maketitle
+\frontmatter
+\include{./portadatesis}
+\pagestyle{empty}	
+
+\chapter*{Agradecimientos}
+\chapter*{Resumen}
+
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+
+\chapter{Introducción}
+	\input{./introduccion}
+
+\chapter{Planteamiento del Problema}
+	\input{./planteamiento_del_problema}
+	
+\chapter{Hipótesis}
+	\input{./hipotesis}
+
+\chapter{Objetivos}
+	\input{./objetivos}
+	
+\chapter{Pregunta de investigación}
+	\input{pregunta_de_investigacion}
+	
+\chapter{Justificación}
+	\input{./justificacion}
+	
+\chapter{Fundamentación teórica}
+	\input{./marco_teorico}
+
+\chapter{Método}
+	\input{./metodo}
+
+\backmatter
+
+\bibliographystyle{apalike}
+\bibliography{referencias.bib}
+
+\chapter{Esquema tentativo}
+	\input{./esquema_tentativo}
+
+\chapter{Cronograma}
+	\input{./cronograma}
+
+\end{document}
